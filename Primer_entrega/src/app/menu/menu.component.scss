@@ -1,0 +1,23 @@
+.menu-container { 
+    
+    display: flex;
+    flex-direction: column;
+    p {
+        font-size: 25px;
+        text-align: center;
+        margin: 10px;
+    };
+    button {
+        text-align: center;
+        margin: 10px;
+        background-color: rgba(236, 124, 19, 0.507);
+    }
+    button:hover {
+        background-color: rgb(243, 113, 7);
+    }
+}
+//la clase menu en el componente no sirve de nada?
+// menu {
+//     padding: 30px;
+//     background-color: blue;
+// }

@@ -1,0 +1,26 @@
+.main-grid-layout {
+    display: flex;
+
+.menu {
+ background-color: rgb(187, 189, 226);
+ width: 20%;
+ height: 100vh
+}
+.secondary-grid-layout {
+    width: 80%;
+    background-color: rgb(253, 201, 201);
+    .toolbar {
+    
+        height: 20vh;
+       }
+    .wrapper {
+    height: 80vh;
+    }
+
+}
+
+}
+
+.footer {
+    width: 100%;
+    }
