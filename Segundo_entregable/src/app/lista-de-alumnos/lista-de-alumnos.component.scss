@@ -1,0 +1,43 @@
+.desaprobado {
+    color: red; /* Cambia el color de texto a rojo */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    /* Agrega otros estilos según tus necesidades */
+  }
+.aprobado {
+    color: green;/* Cambia el color de texto a rojo */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    /* Agrega otros estilos según tus necesidades */
+  }
+
+.button-lista-container {
+  display: block;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+.button-lista {
+  background-color: white;
+  padding: 10px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+ 
+}:active .button-lista {
+  background-color: rgb(139, 221, 84);
+  // transition: 4s;
+}
+
+// >>>>
+
+.lista {
+  list-style: none;
+  
+  li {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  h3 {
+    padding: 0rem 1rem;
+    text-align: center;
+    display: flex;
+    width: 10rem;
+  }
+}
