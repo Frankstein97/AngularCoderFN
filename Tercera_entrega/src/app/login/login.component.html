@@ -1,0 +1,108 @@
+<div class="login-container">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" >
+  <!-- name -->
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Nombre:</label>
+    <input
+      formControlName="name"
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+    />
+    <div id="emailHelp" class="form-text">Como te gusta que te llamen</div>
+  </div>
+  <!-- EMAIL -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email:</label>
+    <input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': emailControlInvalid }"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+    <!-- Si es invalido  -->
+    <div class="invalid-feedback">
+      <ng-container *ngIf="emailControl.errors?.['required']">
+        Campo requerido
+      </ng-container>
+      <ng-container *ngIf="emailControl.errors?.['email']">
+        Debe ser un mail valido
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="mb-3">
+    <label for="phoneNumber" class="form-label">Teléfono:</label>
+    <input
+      formControlName="phoneNumber"
+      type="text"
+      class="form-control"
+      id="phoneNumberId"
+    />
+    <!-- aca no encontre un ng validator para un numero de telefono -->
+    <div
+      *ngIf="
+        userForm.get('phoneNumber')?.touched &&
+        userForm.get('phoneNumber')?.hasError('required')
+      "
+    >
+      <p [ngStyle]="{ color: 'red' }">Este campo es obligatorio.</p>
+    </div>
+    <div
+      *ngIf="
+        userForm.get('phoneNumber')?.touched &&
+        userForm.get('phoneNumber')?.hasError('invalidPhoneNumber')
+      "
+    >
+      <p [ngStyle]="{ color: 'red' }">
+        El número de teléfono no es válido. Debe tener 10 dígitos.
+      </p>
+    </div>
+  </div>
+  <!-- PASS -->
+  <div class="mb-3">
+    <label for="password" class="form-label">Password:</label>
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control"
+      id="password"
+    />
+    <div *ngIf="userForm.get('password')?.hasError('required')">
+      <p [ngStyle]="{ color: 'red' }">La contraseña es obligatoria.</p>
+    </div>
+    <div *ngIf="userForm.get('password')?.hasError('invalidPassword')">
+      <p [ngStyle]="{ color: 'red' }">
+        La contraseña debe contener al menos una letra mayúscula y al menos un
+        número.
+      </p>
+    </div>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1"
+      >Acepto recibir spam y que me roben los datos</label
+    >
+  </div>
+
+  <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">
+    Submit
+  </button>
+</form>
+</div>
+<!-- ////////////////////// -->
+<div class="printvalues-container">
+  <br />
+  <p>VALORES INGRESADOS : </p>
+  <pre> {{ userForm.value | json }} </pre>
+  <br />
+  <p>CONTROL DE EMAIL : </p>
+  <pre> {{ emailControl.errors | json }}</pre>
+  <br />
+  <p>CONTROL DE PASS : </p>
+  <pre>{{ userForm.controls["password"].errors | json }}</pre>
+</div>
