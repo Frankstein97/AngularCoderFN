@@ -1,6 +1,26 @@
-<button (click)="openStudentsDialog()" mat-flat-button color="primary" >
-    <mat-icon>add</mat-icon>
-    agregar students
-</button>
 
-{{studentName}}
+<app-students-table
+class="students-table-container"
+[dataSource]="students"
+(editStudent)="onEditStudent($event)"
+(deleteStudent)="onDeleteStudent($event)"
+>
+</app-students-table>
+
+<div class="data-table-container">
+    <h1>ESTUDIANTES</h1>
+    <div>
+        <p>TOTAL DE ESTUDIANTES:</p>
+        <div class="meta-data"></div>
+    </div>
+    <div>
+        <p>PROMEDIO DE ALGO</p>
+        <div class="meta-data">a</div>
+    </div>
+    <br>
+    <button (click)="openStudentsDialog()" mat-flat-button color="primary" >
+        <mat-icon>add</mat-icon>
+        Añadir Nuevo
+    </button>
+</div>
+
