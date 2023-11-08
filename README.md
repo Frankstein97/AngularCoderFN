@@ -3,9 +3,12 @@ Carpeta que contendra mi proyectos de Angular que desarrollare para las clases d
 
 # AtajosComandos
 
-# ANGULAR
-## Para correr Angular => 
+
+## PARA CORRER ANGULAR => 
 ng serve 
+
+# ANGULAR
+ng new nombre-de-proyecto
 
 ## Para crear componentes => 
 ng generate component {{nombredelcomponente}}
