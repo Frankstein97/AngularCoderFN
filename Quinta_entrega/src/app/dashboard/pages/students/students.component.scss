@@ -14,10 +14,20 @@ p{
     color: white;
     font-weight: 500 ;
 }
-.meta-data {
-    width: auto;
-    height: 4rem;
-    background-color: white;
+.info-box {
+    border: 3px solid #484848;
+    padding: 25px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  .meta-data {
+    font-size: 3.5em;
+    text-align: center;
+  }
+  
+.data {
+    font-size: 24px;
 }
 
 
