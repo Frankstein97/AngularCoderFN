@@ -1,0 +1,12 @@
+<div class="container">
+    <button mat-flat-button color="primary" 
+        (click)="onAddCourse()">
+        <mat-icon>add</mat-icon>
+        Añadir Curso
+    </button>
+</div>
+
+<app-courses-table
+    [table]="(allCourses$ | async) || []"
+    (updateCourse)="onUpdateCourse($event)">
+</app-courses-table>

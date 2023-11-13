@@ -1,0 +1,54 @@
+/* home.component.scss */
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #272727;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.2em;
+    }
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    .school-description {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+  
+      p {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .school-image {
+      flex: 1;
+  
+      img {
+        width: 50%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  

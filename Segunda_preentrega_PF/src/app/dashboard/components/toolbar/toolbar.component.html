@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="toolbar-menu-container">
+    <div class="mat-toolbar-content" >
+        <button mat-icon-button class="example-icon" (click)="openDrawer.emit()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>SIU Classical Criature School</span>
+    </div>
+    <div class="mat-toolbar-content">
+        <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item>
+                <mat-icon>logout</mat-icon>
+                Salir
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>

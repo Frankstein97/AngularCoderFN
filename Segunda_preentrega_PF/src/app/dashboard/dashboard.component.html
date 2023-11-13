@@ -1,0 +1,18 @@
+<app-toolbar
+    (openDrawer)= 'this.toggle = !this.toggle'>
+</app-toolbar>
+
+<mat-drawer-container class="example-container" #drawer>
+
+    <mat-drawer class="example-sidenav" 
+        mode="side"
+        [opened]= "toggle">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+
+    
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>
