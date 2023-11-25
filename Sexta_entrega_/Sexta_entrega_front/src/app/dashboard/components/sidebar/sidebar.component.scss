@@ -1,0 +1,25 @@
+$primary-color: #673ab7; // Purple
+$accent-color: #56e7a1; // Green
+
+mat-list-item{
+    padding: 2em;
+}
+
+.usersBtn{
+    position: absolute;
+    bottom: 0.1%;
+} 
+
+.is-active .tag {
+    color: $accent-color;    
+}
+
+.tag{
+    margin-left: 0.6em;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

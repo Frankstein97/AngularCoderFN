@@ -1,0 +1,11 @@
+mat-card-header {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    position: absolute;
+    right: 3em;
+    display: flex;
+    flex-direction: column;
+}

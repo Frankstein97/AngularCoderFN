@@ -1,0 +1,22 @@
+<div class="container">
+    <p>STUDENTS</p>
+    <button mat-flat-button color="accent" 
+        (click)="onAddStudent()">
+        <mat-icon>add</mat-icon>
+        New student
+    </button>
+</div>
+
+<div class="loading" *ngIf="isLoading; else table">
+    <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<ng-template #table>
+    <app-students-table
+        [table]="students"
+        (updateStudent)="onUpdateStudent($event)"
+        (desactivateStudent)="onDesactivateStudent($event)"
+        (deleteStudent)="onDeleteStudent($event)"
+        (sendEmail)="onSendEmail($event)">
+    </app-students-table>
+</ng-template>

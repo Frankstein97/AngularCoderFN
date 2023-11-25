@@ -1,0 +1,50 @@
+<mat-nav-list>
+    <div>
+        <mat-list-item 
+            routerLink="home" 
+            [routerLinkActive]="['is-active']">
+            <div class="option">
+                <mat-icon>home</mat-icon>
+                <span class="tag">HOME</span>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item 
+            routerLink="students" 
+            [routerLinkActive]="['is-active']">
+            <div class="option">
+                <mat-icon>school</mat-icon>
+                <span class="tag">STUDENTS</span>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item 
+            routerLink="courses" 
+            [routerLinkActive]="['is-active']">
+            <div class="option">
+                <mat-icon>menu_book</mat-icon>
+                <span class="tag">COURSES</span>
+            </div>
+        </mat-list-item>
+
+        <mat-list-item 
+            routerLink="enroll" 
+            [routerLinkActive]="['is-active']">
+            <div class="option">
+                <mat-icon>badge</mat-icon>
+                <span class="tag">ENROLLMENT</span>
+            </div>
+        </mat-list-item>
+    </div>
+
+    <mat-list-item 
+        *ngIf="isAdmin"
+        class="usersBtn"
+        routerLink="users" 
+        [routerLinkActive]="['is-active']">
+        <div class="option">
+            <mat-icon>groups</mat-icon>
+            <span class="tag">USERS</span>
+        </div>
+    </mat-list-item>
+</mat-nav-list>

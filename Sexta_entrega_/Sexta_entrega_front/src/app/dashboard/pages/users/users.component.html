@@ -1,0 +1,21 @@
+<div class="container">
+   <p>USERS</p>
+   <button mat-flat-button color="accent" 
+      (click)="onAddUser()">
+      <mat-icon>add</mat-icon>
+      New user
+   </button>
+</div>
+
+<div class="loading" *ngIf="isLoading; else table">
+   <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<ng-template #table>
+   <app-users-table 
+      [table]="users" 
+      (changeRole)="onChangeRole($event)"
+      (deleteUser)="onDeleteUser($event)">
+   </app-users-table>
+</ng-template>
+
